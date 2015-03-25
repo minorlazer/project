@@ -19,3 +19,16 @@
   </tr>
   <% end %>
 </table>
+<%= form_tag root_path do %>
+    <%= text_field_tag :keywords %>
+    <%= submit_tag 'Search' %>
+<% end %>
+<table>
+  <%= @vault_name.each do |vault| %>
+      <tr>
+        <td><%= vault.name %></td>
+      </tr>
+
+  <% end && "" %>
+</table>
+

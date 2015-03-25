@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   get 'pages/contact' => 'contacts#contact'
 
+  match '/' => 'products#index',
+        :as => 'search_results', :via => :post
+
 end
