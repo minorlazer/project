@@ -1,1 +1,21 @@
-Index Page!
+<h1>This is the front page!</h1>
+<%= link_to 'About Us', pages_about_path %>
+<%= link_to 'Contact', pages_contact_path %>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Stock quantity</th>
+  </tr>
+  </thead>
+  <% @vault_lots.each do |vault| %>
+  <tr>
+    <td><%= vault.name %></td>
+    <td><%= vault.description %></td>
+    <td><%= vault.price %></td>
+    <td><%= vault.quantity%></td>
+  </tr>
+  <% end %>
+</table>
