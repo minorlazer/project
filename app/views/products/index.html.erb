@@ -6,6 +6,7 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
+    <th>Category</th>
     <th>Price</th>
     <th>Stock quantity</th>
   </tr>
@@ -14,21 +15,14 @@
   <tr>
     <td><%= vault.name %></td>
     <td><%= vault.description %></td>
+    <td><%= vault.category.description %></td>
     <td><%= vault.price %></td>
     <td><%= vault.quantity%></td>
   </tr>
   <% end %>
 </table>
+<p>Search all Products by Name:</p>
 <%= form_tag root_path do %>
     <%= text_field_tag :keywords %>
     <%= submit_tag 'Search' %>
 <% end %>
-<table>
-  <%= @vault_name.each do |vault| %>
-      <tr>
-        <td><%= vault.name %></td>
-      </tr>
-
-  <% end && "" %>
-</table>
-

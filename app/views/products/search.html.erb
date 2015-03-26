@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock quantity</th>
+    </tr>
+  </thead>
+  <%= @vault_name.each do |vault| %>
+      <tr>
+        <td><%= vault.name %></td>
+        <td><%= vault.description %></td>
+        <td><%= vault.price %></td>
+        <td><%= vault.quantity%></td>
+      </tr>
+  <% end && "" %>
+</table>
