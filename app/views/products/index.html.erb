@@ -1,4 +1,4 @@
-<h1>This is the front page!</h1>
+<h1>Welcome to Vault-Tec!</h1>
 <%= link_to 'About Us', pages_about_path %>
 <%= link_to 'Contact', pages_contact_path %>
 <%= paginate @vault_lots %>
@@ -27,4 +27,5 @@
     <%= text_field_tag :keywords %>
     <%= select_tag(:category_id, options_for_select(@categories_for_select)) %>
     <%= submit_tag 'Search' %>
+    <%=  %>
 <% end %>
