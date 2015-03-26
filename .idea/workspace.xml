@@ -5,11 +5,14 @@
     <list default="true" id="44a3d21f-5416-4b38-82e1-4faebb787d31" name="Default" comment="" />
 =======
     <list default="true" id="44a3d21f-5416-4b38-82e1-4faebb787d31" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/vault_lot.rb" afterPath="$PROJECT_DIR$/app/models/vault_lot.rb" />
+=======
+>>>>>>> parent of 44c18c5... branch test
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
 >>>>>>> paginate
@@ -46,6 +49,7 @@
       <file leaf-file-name="vault_lot.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/vault_lot.rb">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
               <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
 >>>>>>> paginate
@@ -92,6 +96,10 @@
             <state vertical-scroll-proportion="0.036208734" vertical-offset="0" max-vertical-offset="939">
               <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
 >>>>>>> paginate
+=======
+            <state vertical-scroll-proportion="0.090521835" vertical-offset="0" max-vertical-offset="939">
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+>>>>>>> parent of 44c18c5... branch test
               <folding />
             </state>
           </provider>
@@ -960,9 +968,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.036208734" vertical-offset="0" max-vertical-offset="939">
           <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
 >>>>>>> paginate
+=======
+        <state vertical-scroll-proportion="0.090521835" vertical-offset="0" max-vertical-offset="939">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+>>>>>>> parent of 44c18c5... branch test
           <folding />
         </state>
       </provider>
