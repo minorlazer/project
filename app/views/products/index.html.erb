@@ -24,5 +24,6 @@
 <p>Search all Products by Name:</p>
 <%= form_tag root_path do %>
     <%= text_field_tag :keywords %>
+    <%= select_tag(:category_id, options_for_select(@categories_for_select)) %>
     <%= submit_tag 'Search' %>
 <% end %>
