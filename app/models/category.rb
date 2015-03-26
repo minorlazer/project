@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   has_many :vault_lots
-
+  validates :description, presence: true
   def display_name
     description
   end
