@@ -41,3 +41,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'ransack'
+gem 'kaminari'
