@@ -9,6 +9,7 @@
     <th>Category</th>
     <th>Price</th>
     <th>Stock quantity</th>
+    <th>Image</th>
   </tr>
   </thead>
   <% @vault_lots.each do |vault| %>
@@ -18,6 +19,7 @@
     <td><%= vault.category.description %></td>
     <td><%= vault.price %></td>
     <td><%= vault.quantity%></td>
+    <td><%= image_tag vault.image.medium.url%></td>
   </tr>
   <% end %>
 </table>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326205743) do
+ActiveRecord::Schema.define(version: 20150327160854) do
 
   create_table "abouts", force: true do |t|
     t.string   "title"
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(version: 20150326205743) do
     t.datetime "updated_at"
     t.integer  "category_id"
     t.integer  "order_id"
+    t.string   "image"
   end
 
   add_index "vault_lots", ["category_id"], name: "index_vault_lots_on_category_id"
