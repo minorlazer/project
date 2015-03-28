@@ -1,16 +1,15 @@
-<h1>Welcome to Vault-Tec!</h1>
 
+<%= image_tag 'pleasewait.png', class: 'img-resposnsive' %>
 <%= paginate @vault_lots %>
 <table>
   <thead>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th>Price</th>
-    <th>Stock quantity</th>
-    <th>Image</th>
-  </tr>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Image</th>
+      </tr>
   </thead>
   <% @vault_lots.each do |vault| %>
   <tr>
@@ -18,7 +17,6 @@
     <td><%= vault.description %></td>
     <td><%= vault.category.description %></td>
     <td><%= vault.price %></td>
-    <td><%= vault.quantity%></td>
     <td><%= image_tag vault.image.medium.url%></td>
   </tr>
   <% end %>

@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+.container-fluid {
+    margin: 0 auto;
+    max-width: 980px;
+    min-width: 560px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
+img { width: 100%; }
+
