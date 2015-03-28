@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   match '/' => 'products#search', :as => 'search_results', :via => :post
 
+  get 'products/:id' => 'products#show', :as => 'product', id: /\d+/
 end

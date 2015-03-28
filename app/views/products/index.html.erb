@@ -14,7 +14,7 @@
   </thead>
   <% @vault_lots.each do |vault| %>
   <tr>
-    <td><%= vault.name %></td>
+    <td><%= link_to vault.name, product_path(:id => vault.id) %></td>
     <td><%= vault.description %></td>
     <td><%= vault.category.description %></td>
     <td><%= vault.price %></td>

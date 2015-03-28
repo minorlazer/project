@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>Lot Name</td>
+    <td><%= @vault_lot.name %></td>
+  </tr>
+  <tr>
+    <td>Lot Description</td>
+    <td><%= @vault_lot.description %></td>
+  </tr>
+  <tr>
+    <td>Category/Location</td>
+    <td><%= @vault_lot.category.description %></td>
+  </tr>
+  <tr>
+    <td>Lot Price</td>
+    <td><%= @vault_lot.price %></td>
+  </tr>
+  <tr>
+    <td>Lots Left</td>
+    <td><%= @vault_lot.quantity%></td>
+  </tr>
+  <tr>
+    <td>Lot Description</td>
+    <td><%= image_tag @vault_lot.image.large.url%></td>
+  </tr>
+</table>

@@ -20,6 +20,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    @vault_lot = VaultLot.find(params[:id])
+  end
+
 
   # The associated view app/views/products/index.html.erb is auto-loaded
 
