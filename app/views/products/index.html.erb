@@ -2,29 +2,11 @@
 <%= image_tag 'pleasewait.png', class: 'img-resposnsive' %>
 <%= paginate @vault_lots %>
 <table>
-  <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Image</th>
-      </tr>
-  </thead>
-  <% @vault_lots.each do |vault| %>
-  <tr>
-    <td><%= link_to vault.name, product_path(:id => vault.id) %></td>
-    <td><%= vault.description %></td>
-    <td><%= vault.category.description %></td>
-    <td><%= vault.price %></td>
-    <td><%= image_tag vault.image.medium.url%></td>
-  </tr>
-  <% end %>
+    <%= render partial: "vault_lot", collection: @vault_lots %>
 </table>
 <p>Search all Products by Name:</p>
 <%= form_tag root_path do %>
     <%= text_field_tag :keywords %>
     <%= select_tag(:category_id, options_for_select(@categories_for_select)) %>
     <%= submit_tag 'Search' %>
-    <%=  %>
 <% end %>

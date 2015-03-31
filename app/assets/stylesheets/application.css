@@ -31,5 +31,16 @@ table {
 td {
     text-align: center;
 }
+
+#image img {
+    display: inline;
+    width: 50%;
+}
 img { width: 100%; }
+
+tr th {
+    text-align: center;
+}
+
+
 

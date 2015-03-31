@@ -1,9 +1,8 @@
 class ProductsController < ApplicationController
   def index
-    @vault_lots = VaultLot.all.page(params[:page]).per(4)
+    @vault_lots = VaultLot.all.page(params[:page]).per(4).order('price')
     @vault_name = VaultLot.starts_with(params[:keywords])
     @categories_for_select = Category.categories_for_select # [['All', 0], ...]
-
 
     #@search_results = VaultLot.where("description LIKE?", "%#{params[:keywords]}%")
   end
