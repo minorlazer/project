@@ -4,9 +4,15 @@
 <table>
     <%= render partial: "vault_lot", collection: @vault_lots %>
 </table>
-<p>Search all Products by Name:</p>
+<p>Search all Products by Name, Category or Status:</p>
 <%= form_tag root_path do %>
     <%= text_field_tag :keywords %>
     <%= select_tag(:category_id, options_for_select(@categories_for_select)) %>
     <%= submit_tag 'Search' %>
 <% end %>
+
+<%= form_tag root_path do %>
+    <%= select_tag('filter', options_for_select(['On Sale','New'])) %>
+    <%= submit_tag 'Filter' %>
+<% end %>
+<%= link_to 'On Sale', root_path %>

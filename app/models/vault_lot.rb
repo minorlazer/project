@@ -6,4 +6,5 @@ class VaultLot < ActiveRecord::Base
   validates :name, :price, :quantity, presence: true
 
   mount_uploader :image, VaultImageUploader
+
 end

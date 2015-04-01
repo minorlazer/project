@@ -4,25 +4,30 @@ class ProductsController < ApplicationController
     @vault_name = VaultLot.starts_with(params[:keywords])
     @categories_for_select = Category.categories_for_select # [['All', 0], ...]
 
-    #@search_results = VaultLot.where("description LIKE?", "%#{params[:keywords]}%")
   end
 
   def search
-    #@vault_name = VaultLot.starts_with(params[:keywords])
-    if params[:category_id].to_i == 0
-      @vault_name = VaultLot.where('name like ?', "%#{params[:keywords]}%")
-      # logger.debug "Here I AM!" + params.inspect
+    if params[:commit] == "Search"
+      if params[:category_id].to_i == 0
+        @vault_name = VaultLot.where('name like ?', "%#{params[:keywords]}%")
+      else
+        @vault_name = VaultLot.where('name like ? and category_id = ?',
+                                     "%#{params[:keywords]}%", params[:category_id])
+      end
     else
-      @vault_name = VaultLot.where('name like ? and category_id = ?',
-                                   "%#{params[:keywords]}%", params[:category_id])
-      # logger.debug "There I AM!" + params.inspect
+      if params[:filter] == "On Sale"
+        @vault_name = VaultLot.where('price like ?', "%.5%")
+      else
+        @vault_name = VaultLot.where(:updated_at => 3.days.ago..Time.now)
+      end
     end
+
+
   end
 
   def show
     @vault_lot = VaultLot.find(params[:id])
   end
-
 
   # The associated view app/views/products/index.html.erb is auto-loaded
 
