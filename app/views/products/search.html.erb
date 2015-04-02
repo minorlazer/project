@@ -11,7 +11,7 @@
       <tr>
         <td><%= vault.name %></td>
         <td><%= vault.description %></td>
-        <td><%= vault.price %></td>
+        <td><%= number_to_currency(vault.price) %></td>
         <td><%= vault.quantity%></td>
       </tr>
   <% end && "" %>
