@@ -1,9 +1,0 @@
-<tr>
-    <td><%= link_to vault_lot.name, product_path(:id => vault_lot.id) %></td>
-    <td><%= vault_lot.description %></td>
-    <td><%= vault_lot.category.description %></td>
-    <td><%= number_to_currency(vault_lot.price) %></td>
-    <td><%= image_tag vault_lot.image.medium.url%></td>
-</tr>
-
-

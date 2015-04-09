@@ -1,0 +1,15 @@
+table
+  thead
+    tr
+      th Name
+      th Description
+      th Price
+      th Stock Quantity
+
+  - @vault_name.each do |vault|
+    tr
+      td = vault.name
+      td = vault.description
+      td = number_to_currency(vault.price)
+      td = vault.quantity
+

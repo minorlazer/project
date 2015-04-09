@@ -36,6 +36,6 @@ class ProductsController < ApplicationController
     session[:previous_vault_id] = params[:id]
   end
 
-  # The associated view app/views/products/index.html.erb is auto-loaded
+  # The associated view app/views/products/index.html.slim is auto-loaded
 
 end

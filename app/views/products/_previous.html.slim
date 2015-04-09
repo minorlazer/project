@@ -1,0 +1,15 @@
+- if defined?(@previous_vault)
+  h4 You have also viewed:
+  table
+    thead
+      th Name
+      th Description
+      th Price
+      th Quantity
+
+    tr
+      td = @previous_vault.name
+      td = @previous_vault.description
+      td = number_to_currency(@previous_vault.price)
+      td = @previous_vault.quantity
+      td = image_tag @previous_vault.image.medium.url
