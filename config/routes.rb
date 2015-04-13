@@ -15,5 +15,10 @@ Rails.application.routes.draw do
 
   get 'products/:id' => 'products#show', :as => 'product', id: /\d+/
 
+  post 'flag_item', to: 'products#flag_item', :as => 'flag_item'
+
+  get 'products/purchase' => 'products#purchase', :as => 'purchase', id: /\d+/
+
+  post 'products/confirm' => 'products#confirm', :as => 'confirm'
   #get 'pages/payment' => 'payments#payment', :as => 'payments'
 end

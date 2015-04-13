@@ -4,3 +4,4 @@ tr
   td = vault_lot.category.description
   td = number_to_currency(vault_lot.price)
   td = image_tag vault_lot.image.medium.url
+  td = link_to 'buy now!', purchase_path(:id => vault_lot.id)

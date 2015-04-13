@@ -1,0 +1,19 @@
+div
+  table
+    = render partial: 'vault_lot', object: @vault_lot
+
+  = form_tag confirm_path do
+    = label_tag :first_name, 'First Name'
+    = text_field_tag :first_name
+    = label_tag :last_name, 'Last Name'
+    = text_field_tag :last_name
+    = label_tag :street, 'Street'
+    = text_field_tag :street
+    = label_tag :city, 'City'
+    = text_field_tag :city
+    = label_tag :province_id, 'Province'
+    = select_tag(:province_id, options_for_select(@provinces_for_select))
+    = label_tag :phone_number, 'Phone Number'
+    = text_field_tag :phone_number
+    = hidden_field_tag :vault_lot_id, @vault_lot.id
+    = submit_tag 'Purchase Now!'

@@ -13,3 +13,6 @@
       td = number_to_currency(@previous_vault.price)
       td = @previous_vault.quantity
       td = image_tag @previous_vault.image.medium.url
+- else
+  h4
+    = flash[:notice] = 'You have no previously viewed products.'
