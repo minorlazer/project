@@ -1,9 +1,6 @@
 = image_tag 'pleasewait.png', class: 'img-resposnsive'
 = paginate @vault_lots
 
-table
-  = render partial: "vault_lot", collection: @vault_lots
-
 p Search all Products by Name, Category or Status:
 
 = form_tag root_path do
@@ -14,3 +11,7 @@ p Search all Products by Name, Category or Status:
 = form_tag root_path do
   = select_tag('filter', options_for_select(['On Sale','New']))
   = submit_tag 'Filter'
+
+table
+  = render partial: "vault_lot", collection: @vault_lots
+

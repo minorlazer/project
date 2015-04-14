@@ -21,6 +21,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
     height: 100%;
+    border: dotted 1px #000;
+    padding: 10px;
 }
 
 table {
@@ -42,5 +44,19 @@ tr th {
     text-align: center;
 }
 
+#keywords {
+    height: 20px;
+    margin-right: 10px;
+}
 
+#category_id {
+    margin-right: 10px;
+}
 
+#filter {
+    margin-right: 10px;
+}
+
+.navlinks {
+    margin: 5px;
+}

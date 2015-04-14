@@ -5,17 +5,19 @@
 
 .customer_info
   p
-    'First Name: '
+    | First Name:
     = @new_customer.first_name
   p
-    'Last Name: '
+    | Last Name:
     = @new_customer.last_name
   p
-    'Address: '
+    | Address:
     = "#{@new_customer.street}, #{@new_customer.city}, #{@new_customer.province.name}"
   p
-    'Phone Number: '
+    | Phone Number:
     = @new_customer.phone_number
   p
-    'Grand Total: '
+    | Grand Total:
     = number_to_currency(@grand_total)
+
+= flash[:notice]

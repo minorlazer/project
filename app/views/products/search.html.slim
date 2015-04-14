@@ -8,7 +8,7 @@ table
 
   - @vault_name.each do |vault|
     tr
-      td = vault.name
+      td = link_to vault.name, product_path(:id => vault.id)
       td = vault.description
       td = number_to_currency(vault.price)
       td = vault.quantity

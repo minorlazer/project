@@ -1,6 +1,6 @@
 div
   table
-    = render partial: 'vault_lot', object: @vault_lot
+    = render partial: "products/show", object: @vault_lot
 
   = form_tag confirm_path do
     = label_tag :first_name, 'First Name'

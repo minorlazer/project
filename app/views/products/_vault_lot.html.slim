@@ -1,7 +1,8 @@
-tr
-  td = link_to vault_lot.name, product_path(:id => vault_lot.id)
-  td = vault_lot.description
-  td = vault_lot.category.description
-  td = number_to_currency(vault_lot.price)
-  td = image_tag vault_lot.image.medium.url
-  td = link_to 'buy now!', purchase_path(:id => vault_lot.id)
+div.item
+  p = link_to vault_lot.name, product_path(:id => vault_lot.id)
+  p = vault_lot.description
+  p = vault_lot.category.description
+  p = number_to_currency(vault_lot.price)
+  div.tableimage
+    = image_tag vault_lot.image.medium.url
+  p = link_to 'buy now!', purchase_path(:id => vault_lot.id)

@@ -1,0 +1,8 @@
+div
+  p = link_to @vault_lot.name, product_path(:id => @vault_lot.id)
+  p = @vault_lot.description
+  p = @vault_lot.category.description
+  p = number_to_currency(@vault_lot.price)
+  div.tableimage
+    = image_tag @vault_lot.image.large.url
+  p = link_to 'buy now!', purchase_path(:id => @vault_lot.id)

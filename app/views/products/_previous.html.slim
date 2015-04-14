@@ -8,7 +8,7 @@
       th Quantity
 
     tr
-      td = @previous_vault.name
+      td = link_to @previous_vault.name, product_path(:id => @previous_vault.id)
       td = @previous_vault.description
       td = number_to_currency(@previous_vault.price)
       td = @previous_vault.quantity
