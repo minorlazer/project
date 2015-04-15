@@ -12,13 +12,10 @@ table {
   height: 300px;
   display: inline-block;
   float: left;
-  overflow: auto;
 
   .tableimage {
     img{
       width: auto;
     }
-
-    overflow: auto;
   }
 }

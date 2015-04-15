@@ -1,6 +1,6 @@
 class AboutsController < ApplicationController
   def self.controller_path
-    "pages"
+    'pages'
   end
   def about
     @about = About.first

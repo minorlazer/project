@@ -7,7 +7,7 @@ class Province < ActiveRecord::Base
     provinces = all
     descriptions = []
     provinces.each do |row|
-      descriptions << [row.name,row.id]
+      descriptions << [row.name, row.id]
     end
     descriptions
   end

@@ -9,7 +9,7 @@ class Category < ActiveRecord::Base
     categories = all
     descriptions = [['All', 0]]
     categories.each do |row|
-      descriptions << [row.description,row.id]
+      descriptions << [row.description, row.id]
     end
     descriptions
   end

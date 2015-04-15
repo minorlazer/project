@@ -5,23 +5,13 @@ class ProductsController < ApplicationController
     @vault_lots = VaultLot.all.page(params[:page]).per(4).order('price')
     @vault_name = VaultLot.starts_with(params[:keywords])
     @categories_for_select = Category.categories_for_select # [['All', 0], ...]
-
   end
 
   def search
-    if params[:commit] == "Search"
-      if params[:category_id].to_i == 0
-        @vault_name = VaultLot.where('name like ?', "%#{params[:keywords]}%")
-      else
-        @vault_name = VaultLot.where('name like ? and category_id = ?',
-                                     "%#{params[:keywords]}%", params[:category_id])
-      end
+    if params[:commit] == 'Search'
+      @vault_name = VaultLot.search(params)
     else
-      if params[:filter] == "On Sale"
-        @vault_name = VaultLot.where('price like ?', "%.5%")
-      else
-        @vault_name = VaultLot.where(:updated_at => 3.days.ago..Time.now)
-      end
+      @vault_name = VaultLot.filter(params)
     end
   end
 
@@ -40,37 +30,17 @@ class ProductsController < ApplicationController
   end
 
   def confirm
-    @new_customer = Customer.create(first_name: params[:first_name],
-                                    last_name: params[:last_name],
-                                    street: params[:street],
-                                    city: params[:city],
-                                    province_id: params[:province_id],
-                                    phone_number: params[:phone_number])
+    @new_customer = Customer.new_customer(params)
 
     if @new_customer.save
-      @new_order = @new_customer.orders.build
-      @new_order.status = 'pending'
-      @new_order.gst = @new_customer.province.gst
-      @new_order.pst = @new_customer.province.pst
-      @new_order.hst = @new_customer.province.hst
-      @new_order.vault_lot_id = params[:vault_lot_id].to_s
-      @new_order.save
+      Order.new_order(@new_customer, params[:vault_lot_id])
 
       @single_vault = VaultLot.find(params[:vault_lot_id])
 
-      gst = @new_customer.province.gst
-      pst = @new_customer.province.pst
-      hst = @new_customer.province.hst
-
-      price_gst = @single_vault.price * gst
-      price_pst = @single_vault.price * pst
-      price_hst = @single_vault.price * hst
-
-      @grand_total = @single_vault.price + price_gst + price_pst + price_hst
+      @grand_total = Order.total(@new_customer, @single_vault)
     else
       flash[:notice] = 'An error has occurred! Please try again.'
     end
   end
   # The associated view app/views/products/index.html.slim is auto-loaded
-
 end
