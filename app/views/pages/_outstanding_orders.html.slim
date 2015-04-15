@@ -1,0 +1,17 @@
+table
+  thead
+    th Customer Id
+    th First Name
+    th Last Name
+    th Order Id
+    th Phone Number
+    th Order Status
+  tbody
+  - pending_customers.each do |row|
+    tr
+      td = link_to row.customer.id, admin_customer_path(:id => row.customer.id)
+      td = row.customer.first_name
+      td = row.customer.last_name
+      td = link_to row.id, admin_order_path(:id => row.id)
+      td = row.customer.phone_number
+      td = row.status

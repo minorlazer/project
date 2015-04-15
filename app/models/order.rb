@@ -13,7 +13,7 @@ class Order < ActiveRecord::Base
   end
 
   def self.total(new_customer, single_vault)
-    grand_total = single_vault.price + self.taxes(new_customer, single_vault)
+    grand_total = single_vault.price + taxes(new_customer, single_vault)
     grand_total
   end
 

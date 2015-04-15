@@ -46,4 +46,3 @@ gem 'mini_magick'
 gem 'slim'
 gem 'slim-rails'
 gem 'rubocop', require: false
-gem 'pg'
